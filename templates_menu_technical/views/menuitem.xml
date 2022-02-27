@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_qweb_templates_menu" model="ir.actions.act_window">
+        <field name="name">Qweb Templates</field>
+        <field name="res_model">ir.ui.view</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('type','=','qweb')]</field>
+        <field name="context">{'search_default_active': 1}</field>
+        <field name="view_id" ref="view_view_tree_inherit_qweb_templates"/>
+    </record>
+    <menuitem
+            action="action_qweb_templates_menu"
+            id="templates_menu"
+            name="Qweb Templates"
+            parent="base.next_id_2"
+            groups="base.group_no_one"
+            sequence="2"
+    />
+</odoo>
